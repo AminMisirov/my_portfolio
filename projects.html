@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Amin Misirov – Layihələr</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Layihələr səhifəsi üçün əlavə stil */
+    #projects-list {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .project-post {
+      background: var(--c2);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      color: var(--c9);
+    }
+    .project-post h2 {
+      margin-bottom: 10px;
+      color: var(--c6);
+    }
+    .project-post .date {
+      font-size: 0.9rem;
+      color: var(--c7);
+      margin-bottom: 15px;
+      font-style: italic;
+    }
+    .project-post p {
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+    pre {
+      background: #2d2d2d;
+      color: #f8f8f2;
+      padding: 15px;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-size: 0.9rem;
+      font-family: 'Courier New', Courier, monospace;
+      margin-bottom: 15px;
+    }
+    /* Daha çox üçün kliklə düyməsi */
+    .project-button {
+      display: inline-block;
+      background-color: var(--c9);
+      color: var(--white);
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+    .project-button:hover {
+      background-color: var(--highlight);
+      color: var(--black);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">Amin Misirov</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Ana Səhifə</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="projects.html" class="active_page">Layihələr</a></li>
+        <li><a href="contact.html">Əlaqə</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main id="projects-list">
+    <h1>Layihələrim</h1>
+
+    <!-- Project 1 -->
+    <article class="project-post">
+      <h2>Portfolio Saytı <small>(Tezliklə GitHub-da)</small></h2>
+      <p class="date">İyul 2025</p>
+      <p>
+        Şəxsi portfolio saytım üzərində işləyirəm. Modern, cavabdeh dizayn və istifadəçi təcrübəsini ön planda tuturam. Tezliklə GitHub-da tam kodlarını paylaşacağam.
+      </p>
+      <pre><code>
+&lt;header&gt;
+  &lt;div class="logo"&gt;Amin Misirov&lt;/div&gt;
+  &lt;nav&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="index.html"&gt;Ana Səhifə&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="blogs.html"&gt;Blogs&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="projects.html"&gt;Layihələr&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="contact.html"&gt;Əlaqə&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+      </code></pre>
+      <a target="_blank" class="project-button">Daha çox üçün kliklə</a>
+    </article>
+
+    <!-- Project 2 -->
+    <article class="project-post">
+      <h2>Django Blog Proyekti</h2>
+      <p class="date">İyun 2025</p>
+      <p>
+        Django ilə dinamik blog sistemi yaratdım. İstifadəçi qeydiyyatı, post əlavə etmə, kateqoriya sistemi kimi funksiyalar mövcuddur. Backend və frontend kodları tam inteqrasiya olunub.
+      </p>
+      <pre><code>
+# views.py nümunəsi
+from django.shortcuts import render
+from .models import Post
+
+def home(request):
+    posts = Post.objects.all()
+    return render(request, 'home.html', {'posts': posts})
+      </code></pre>
+      <a href="https://github.com/AminMisirov/django_webpages" target="_blank" class="project-button">Daha çox üçün kliklə</a>
+    </article>
+
+    <!-- Project 3 -->
+    <article class="project-post">
+      <h2>Python Veb Scrapping Skripti</h2>
+      <p class="date">May 2025</p>
+      <p>
+        Bu Python skripti veb səhifələrdən məlumatları avtomatik yükləyir və işləyir. Requests və BeautifulSoup kitabxanalarından istifadə edir, JSON formatında çıxış verir.
+      </p>
+      <pre><code>
+import requests
+from bs4 import BeautifulSoup
+
+url = "https://example.com"
+response = requests.get(url)
+soup = BeautifulSoup(response.text, "html.parser")
+
+data = soup.find_all("div", class_="content")
+for item in data:
+    print(item.text)
+      </code></pre>
+      <a href="https://github.com/AminMisirov/pyton_webscrapping" target="_blank" class="project-button">Daha çox üçün kliklə</a>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Made by Amin Misirov for <a href="https://apply.holbertonschool.com" target="_blank" rel="noopener">Holberton School</a>.</p>
+    <p><img src="https://apply.holbertonschool.com/holberton-logo.png" alt="Holberton School Logo"></p>
+  </footer>
+</body>
+</html>

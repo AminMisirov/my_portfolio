@@ -1,0 +1,289 @@
+/* Color Palette Variables */
+:root {
+  --c1: #FAF2FF;
+  --c2: #DDB9FF;
+  --c3: #B97EFC;
+  --c4: #8C43F5;
+  --c5: #590CE8;
+  --c6: #3804B8;
+  --c7: #200187;
+  --c8: #0F0057;
+  --c9: #040026;
+  --white: #ffffff;
+  --black: #000000;
+  --highlight: #1abc9c;
+}
+
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* Body */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--c1);
+  color: var(--c9);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header & Nav */
+header {
+  background: var(--c8);
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.logo { font-size: 1.5rem; font-weight: 700; color: var(--white); }
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+}
+nav ul li a {
+  color: var(--white);
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: 0.3s;
+  font-weight: 600;
+}
+nav ul li a:hover {
+  background-color: var(--highlight);
+  color: var(--black);
+}
+nav ul li a.active_page {
+  background-color: var(--highlight);
+  color: var(--black);
+  pointer-events: none;
+}
+
+
+/* Social icons in header */
+.social {
+  width: 22px;
+  height: 22px;
+  fill: var(--c1);
+  transition: fill .3s;
+}
+.social:hover { fill: var(--highlight); }
+
+/* Main */
+main { flex: 1; padding: 40px 20px; max-width: 900px; margin: 0 auto; }
+
+/* Sections */
+section { margin-bottom: 40px; }
+section h2 {
+  color: var(--c6);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Grid cards */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+}
+.skill-card {
+  background: var(--c2);
+  border-radius: 8px;
+  padding: 20px;
+  color: var(--c9);
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform .3s;
+}
+.skill-card:hover { transform: scale(1.05); }
+
+/* Contact Container */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+.contact-section {
+  background: var(--c1);
+  color: var(--c9);
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  flex: 1 1 300px;
+  max-width: 350px;
+}
+.contact-section h2 { color: var(--c6); }
+
+.phone-list p { margin-bottom: 12px; font-size: 1rem; }
+.phone-list a {
+  color: var(--white);
+  background: var(--black);
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+.phone-list a:hover { background: var(--highlight); color: var(--black); }
+
+/* Email link */
+.contact-section a.email-link {
+  display: inline-block;
+  color: var(--white);
+  background: var(--black);
+  padding: 6px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background .3s;
+}
+.contact-section a.email-link:hover {
+  background: var(--highlight);
+  color: var(--black);
+}
+
+/* Big social icons in contact */
+.big-social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.big-social-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--black);
+  color: var(--white);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .3s;
+}
+.big-social-icon:hover { background: var(--white); color: var(--black); }
+.big-social-icon.x svg { fill: var(--white); }
+
+/* Footer */
+footer {
+  background: var(--c8);
+  color: var(--white);
+  text-align: center;
+  padding: 15px 20px;
+}
+footer a { color: var(--c3); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+/* Responsive */
+@media (max-width:768px) {
+  .contact-container { flex-direction: column; align-items: center; }
+  header { flex-direction: column; gap: 10px; }
+  nav ul { justify-content: center; }
+}
+#blog-list {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.blog-post {
+  background: var(--c2);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  color: var(--c9);
+}
+.blog-post h2 {
+  margin-bottom: 10px;
+  color: var(--c6);
+}
+.blog-post .date {
+  font-size: 0.9rem;
+  color: var(--c7);
+  margin-bottom: 15px;
+  font-style: italic;
+}
+.join-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.join-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #8C43F5; /* paletdən uyğun rəng */
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.join-button:hover {
+  background-color: #590CE8; /* hover effekti */
+}
+
+.join-button .icon {
+  width: 24px;
+  height: 24px;
+}
+/* Daxili stil */
+    #projects-list {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .project-post {
+      background: var(--c2);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      color: var(--c9);
+    }
+    .project-post h2 {
+      margin-bottom: 10px;
+      color: var(--c6);
+    }
+    .project-post .date {
+      font-size: 0.9rem;
+      color: var(--c7);
+      margin-bottom: 15px;
+      font-style: italic;
+    }
+    .project-post p {
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+    pre {
+      background: #2d2d2d;
+      color: #f8f8f2;
+      padding: 15px;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-size: 0.9rem;
+      font-family: 'Courier New', Courier, monospace;
+      margin-bottom: 15px;
+    }
+    /* Layihə link düyməsi */
+    .project-button {
+      display: inline-block;
+      background-color: #000000;
+      color: #ffffff;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+    .project-button:hover {
+      background-color: var(--highlight);
+      color: var(--black);
+    }
