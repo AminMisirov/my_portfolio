@@ -4,8 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Amin Misirov - Contact</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://apply.holbertonschool.com/level2/school.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <script src="behavior.js"></script>
+</head>
+<body class="works_on_smartphone">
+  <!-- Header with social share buttons -->
   <header>
+    <div class="right">
+      <!-- Twitter Share Button -->
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+      <script async src="https://platform.twitter.com/widgets.js"></script>
+      
+      <!-- Facebook Share Button -->
+      <div class="fb-share-button" data-href="http://35.181.58.35/contact.html" data-layout="button" data-size="small">
+        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F35.181.58.35%2Fcontact.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Paylaş</a>
+      </div>
+    </div>
+    
     <div class="logo">Amin Misirov</div>
     <nav>
       <ul>
@@ -13,6 +29,7 @@
         <li><a href="blogs.html">Blogs</a></li>
         <li><a href="projects.html">Layihələr</a></li>
         <li><a href="contact.html" class="active_page">Əlaqə</a></li>
+        <li><a href="tweets.html">Tweets</a></li>
       </ul>
     </nav>
   </header>
@@ -20,26 +37,24 @@
   <main>
     <article>
       <div class="contact-container">
-
         <!-- Contact Me form -->
         <section class="contact-section contact-form-section">
-          <h2 >Contact Me</h2>
+          <h1>Contact Me</h1>
           <form class="contact-form" action="#" method="post" novalidate>
             <div class="phone-list">
               <p><a> +994 99 823 63 73</a> <a href="https://wa.me/+994998236373" target="_blank" rel="noopener">WhatsApp</a></p>
               <p><a>+994 50 553 50 71</a>  <a href="https://wa.me/+994505535071" target="_blank" rel="noopener">WhatsApp</a></p>
             </div>
 
-
-            <a href="mailto:aminmisirov1400@gmail.com" class="email-link"> aminmisirov1400@gmail.com</a>
-
+            <a href="mailto:aminmisirov1400@gmail.com" class="email-link">aminmisirov1400@gmail.com</a>
             
+            <!-- Smart Thumbnail Example -->
+            <img id="smart_thumbnail" class="small" src="https://apply.holbertonschool.com/holberton-logo.png" alt="Holberton Logo">
           </form>
         </section>
-    </article>    
-    <!-- Sosial Media -->
-    <article>
-    <section class="contact-section social-section">
+
+        <!-- Sosial Media -->
+        <section class="contact-section social-section">
           <h2>Sosial Media</h2>
           <div class="big-social-icons">
             <a href="https://www.instagram.com/amin_misirov/" target="_blank" rel="noopener" aria-label="Instagram" class="big-social-icon instagram">
@@ -58,27 +73,42 @@
             </a>
           </div>
         </section>
+
+        <!-- Join Section -->
+        <section class="contact-section join-section">
+          <h2>Join We</h2>
+          <p>Texnologiya və proqramlaşdırma dünyasında birlikdə öyrənmək və inkişaf etmək üçün mənimlə qoşul!</p>
+          <div class="join-container">
+            <a href="https://discord.gg/7JDJhdrt" target="_blank" class="join-button">
+              <img src="icons/discord-black.png" alt="Discord" class="icon" />
+              Discord Qrupuna Qoşul
+            </a>
+          </div>
+        </section>
       </div>
     </article>
-    <article>
-  <section class="contact-section join-section">
-    <h2>Join We</h2>
-    <p>Texnologiya və proqramlaşdırma dünyasında birlikdə öyrənmək və inkişaf etmək üçün mənimlə qoşul!</p>
-
-    <div class="join-container">
-      <a href="https://discord.gg/7JDJhdrt" target="_blank" class="join-button">
-        <img src="icons/discord-black.png" alt="Discord" class="icon" />
-        Discord Qrupuna Qoşul
-      </a>
-    </div>
-  </section>
-</article>
-
+    
+    <aside>
+      <div id="disqus_thread"></div>
+      <script>
+        (function() {
+          var d = document, s = d.createElement('script');
+          s.src = 'https://aminmisirov.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </aside>
   </main>
 
   <footer>
-    <p>Made by Amin Misirov for <a href="https://apply.holbertonschool.com" target="_blank">Holberton School</a>.</p>
-    <p><img src="https://apply.holbertonschool.com/holberton-logo.png">.</p>
+    <p>Made by Amin Misirov for <a href="https://apply.holbertonschool.com" target="_blank" rel="noopener">Holberton School</a>.</p>
+    <p><img src="https://apply.holbertonschool.com/holberton-logo.png" alt="Holberton Logo"></p>
   </footer>
+  
+  <!-- Facebook SDK for share button -->
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0" nonce="YOUR_NONCE"></script>
 </body>
 </html>

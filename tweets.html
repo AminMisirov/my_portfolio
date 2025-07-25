@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Amin Misirov - Portfolio</title>
+  <title>Amin Misirov - Tweets</title>
   <link href="styles.css" rel="stylesheet" />
 </head>
 <body class="works_on_smartphone">
@@ -11,29 +11,33 @@
     <div class="logo">Amin Misirov</div>
     <nav>
       <ul>
-        <li><a href="index.html" class="active_page">Ana Səhifə</a></li>
+        <li><a href="index.html">Ana Səhifə</a></li>
         <li><a href="blogs.html">Blogs</a></li>
         <li><a href="projects.html">Layihələr</a></li>
         <li><a href="contact.html">Əlaqə</a></li>
-        <li><a href="tweets.html">Tweets</a></li>
+        <li><a href="tweets.html" class="active_page">Tweets</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <article>
-      <h1>Haqqımda</h1>
-      <p>Mən Amin Misirov, Holberton School tələbəsiyəm. Web və proqramlaşdırma dünyasına olan marağım məni bu sahədə inkişaf etməyə həvəsləndirir.</p>
+      <h1>Mənim Tweetlərim</h1>
+
+      <!-- Embed Tweet -->
+      <blockquote class="twitter-tweet">
+        <p lang="en" dir="ltr">Learning HTML, CSS & JS at Holberton School! 🚀</p>
+        &mdash; Amin Misirov (@amin_misirov)
+        <a href="https://twitter.com/amin_misirov/status/1234567890">July 25, 2025</a>
+      </blockquote>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
       <!-- Smart Thumbnail -->
       <img id="smart_thumbnail" src="https://apply.holbertonschool.com/holberton-logo.png" class="small" alt="thumbnail" />
     </article>
 
     <aside>
-      <h2>Əlaqə</h2>
-      <p>Mənimlə əlaqə üçün <a href="contact.html">Əlaqə səhifəsinə</a> keçid edin.</p>
-
-      <!-- Disqus (HTML struktur olaraq daxil) -->
+      <h2>Rəylər</h2>
       <div id="disqus_thread"></div>
     </aside>
   </main>
